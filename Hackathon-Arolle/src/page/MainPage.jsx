@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/image/logo.png";
 import "./mainPage.css";
 import UseChatMessages from "../components/useChatMessages";
+import Slider from "../components/slider/Slider";
 
 function MainPage() {
   const { addMessage, messages, prompts } = UseChatMessages();
@@ -16,13 +17,21 @@ function MainPage() {
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showSlider, setShowSlider] = useState(false);
 
-  const handleAnswerClick = (answer) => {
+  const handleAnswerClick = (e, answer) => {
+    e.stopPropagation();
+    e.preventDefault();
     addMessage(answer);
 
-    if (currentQuestionIndex + 1 < prompts.length) {
+    if (currentQuestionIndex <= answer.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       addMessage(prompts[currentQuestionIndex + 1]);
+      console.log(currentQuestionIndex, answers.length);
+    }
+    if (currentQuestionIndex >= prompts.length - 2) {
+      console.log(currentQuestionIndex);
+      setShowSlider(true);
     }
   };
 
@@ -39,15 +48,17 @@ function MainPage() {
             ))}
           </div>
           <div className="user-reply-container">
-            {answers[currentQuestionIndex].map((answer, index) => (
-              <div
-                className="user-answer-container"
-                onClick={() => handleAnswerClick(answer)}
-              >
-                <p key={index}>{answer}</p>
-              </div>
-            ))}
+            {currentQuestionIndex < answers.length &&
+              answers[currentQuestionIndex].map((answer, index) => (
+                <div
+                  className="user-answer-container"
+                  onClick={(e) => handleAnswerClick(e, answer)}
+                >
+                  <p key={index}>{answer}</p>
+                </div>
+              ))}
           </div>
+          {showSlider && <Slider />}
         </div>
       </div>
     </div>
