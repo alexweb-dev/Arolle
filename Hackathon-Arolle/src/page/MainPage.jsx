@@ -3,9 +3,11 @@ import logo from "../assets/image/logo.png";
 import "./mainPage.css";
 import UseChatMessages from "../components/useChatMessages";
 import Slider from "../components/slider/Slider";
+import Map from "../components/map/map";
 
 function MainPage() {
   const { addMessage, messages, prompts } = UseChatMessages();
+  const [displayMap, setDisplayMap] = useState(false);
   const answers = [
     ["Between 18 and 25", "Between 25 and 40", "Between 40 and 60"],
     ["Yes", "No"],
@@ -82,6 +84,21 @@ function MainPage() {
                 ))}
             </div>
             {showSlider && <Slider />}
+            {showSlider && (<div className="chat-prompt">
+              <p>
+                Also did you know that you can bring back your old products to
+                L’Oreal to recycle your containers ? Click{" "}
+                <span onClick={() => setDisplayMap(true)}>here</span> to check
+                our collect points
+              </p>
+            </div>)}
+
+            
+            {displayMap && (
+              <div>
+                <Map />
+              </div>
+            )}
           </div>
         )}
       </div>
