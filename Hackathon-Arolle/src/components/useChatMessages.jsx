@@ -9,7 +9,7 @@ function UseChatMessages() {
     "What type of facial product are you looking for ?",
     "What’s your skin color ?",
     "What’s your skin type ?",
-    "According to your answers, here are some products that may suit you",
+    `According to your answers, here are some products that may suit you`,
   ];
   const [messages, setMessages] = useState([prompts[0]]);
 
