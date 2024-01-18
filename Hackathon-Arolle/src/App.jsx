@@ -1,14 +1,17 @@
-import './App.css'
-import Slider from './components/slider/Slider'
+
+
+import "./App.css";
+import MainPage from "./page/MainPage";
+
 
 function App() {
- 
-
   return (
     <>
-      <Slider/>
+
+      <MainPage />
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
