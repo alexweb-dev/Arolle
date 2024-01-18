@@ -24,7 +24,7 @@ function MainPage() {
     e.preventDefault();
     addMessage(answer);
 
-    if (currentQuestionIndex <= answer.length) {
+    if (currentQuestionIndex <= answers.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       addMessage(prompts[currentQuestionIndex + 1]);
       console.log(currentQuestionIndex, answers.length);
