@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/image/logo.png";
 import "./mainPage.css";
 import UseChatMessages from "../components/useChatMessages";
+import Slider from "../components/slider/Slider";
+import Map from "../components/map/map";
 
 function MainPage() {
   const { addMessage, messages, prompts } = UseChatMessages();
@@ -48,7 +50,9 @@ function MainPage() {
               </div>
             ))}
           </div>
+          <Slider />
         </div>
+        
       </div>
     </div>
   );
