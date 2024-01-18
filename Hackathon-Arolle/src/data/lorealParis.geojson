@@ -1,0 +1,59 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "adresse": "2 Rue Jean Cocteau, 91100 Corbeil-Essonnes",
+        "image": "../assets/image/LOrealLogo1909.jpg"
+      },
+      "geometry": {
+        "coordinates": [48.60821421418574, 2.4479559576708136],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adresse": "14 Rue Royale, 75008 Paris",
+        "image": "../assets/image/LOrealLogo1909.jpg"
+      },
+      "geometry": {
+        "coordinates": [48.868166724989365, 2.3233210152392707],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adresse": "9 Quai du Châtelier, 93450 L'Île-Saint-Denis",
+        "image": "../assets/image/LOrealLogo1909.jpg"
+      },
+      "geometry": {
+        "coordinates": [48.92272695117422, 2.329884999981896],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adresse": "47BIS Av. Hoche, 75008 Paris",
+        "image": ""
+      },
+      "geometry": {
+        "coordinates": [48.875018123057245, 2.2986013410863215],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adresse": "9 Rue Pelloutier, 77183 Croissy-Beaubourg",
+        "image": ""
+      },
+      "geometry": {
+        "coordinates": [48.82655149121544, 2.636042911638534],
+        "type": "Point"
+      }
+    }
+  ]
+}
