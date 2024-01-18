@@ -1,11 +1,12 @@
 import './App.css'
+import Slider from './components/slider/Slider'
 
 function App() {
  
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <Slider/>
     </>
   )
 }
