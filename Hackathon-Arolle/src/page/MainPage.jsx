@@ -52,7 +52,10 @@ function MainPage() {
           </div>
           <Slider />
         </div>
-        
+        <div>
+          <Map />
+        </div>
+
       </div>
     </div>
   );

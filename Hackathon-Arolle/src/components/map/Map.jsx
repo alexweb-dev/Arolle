@@ -33,7 +33,7 @@ function Map() {
       and properties, and add it to the map.
     */
     // const popup = new mapboxgl.Popup({ offset: [0, -15] })
-    //   .setLngLat(feature.geometry.coordinates)
+      // .setLngLat(feature.geometry.coordinates)
     //   .setHTML(
     //     `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
     //   )
@@ -42,7 +42,7 @@ function Map() {
   }, []);
   return (
     <div className="map-container">
-      <div id="map"></div>{" "}
+      <div id="map"></div>
     </div>
   );
 }
