@@ -12,15 +12,20 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 10%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-top: 5%;
+  padding-left: 18%;
+  padding-right: 4%;
+  gap: 15%;
 }
 
 .foundation_description p {
   width: 176px;
-  font-size: 12px;
+  font-size: 13px;
   color: black;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-weight: bold;
+  line-height: 110%;
 }
 
 .foundation_description:first-child {
