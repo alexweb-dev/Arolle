@@ -8,4 +8,4 @@ function ChatBotCard() {
   )
 }
 
-export default ChatBotCard
+export default ChatBotCard;
