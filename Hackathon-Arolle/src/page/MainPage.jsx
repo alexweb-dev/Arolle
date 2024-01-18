@@ -18,6 +18,9 @@ function MainPage() {
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showSlider, setShowSlider] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+  const [isParagraphVisible, setIsParagraphVisible] = useState(true);
 
   const handleAnswerClick = (e, answer) => {
     e.stopPropagation();
@@ -32,34 +35,55 @@ function MainPage() {
     if (currentQuestionIndex >= prompts.length - 2) {
       console.log(currentQuestionIndex);
       setShowSlider(true);
+      setButtonClicked(true);
     }
+  };
+
+  const toggleButton = () => {
+    setShowButton(!showButton);
+    setButtonClicked(true);
+    setIsParagraphVisible(false);
   };
 
   return (
     <div className="whole_page">
       <img className="logo" src={logo} alt="Logo" />
       <div className="chatbox">
-        <div className="chat-container">
-          <div className="chat-exchange">
-            {messages.map((message, index) => (
-              <div className="chat-prompt">
-                <p key={index}>{message}</p>
-              </div>
-            ))}
-          </div>
-          <div className="user-reply-container">
-            {currentQuestionIndex < answers.length &&
-              answers[currentQuestionIndex].map((answer, index) => (
-                <div
-                  className="user-answer-container"
-                  onClick={(e) => handleAnswerClick(e, answer)}
-                >
-                  <p key={index}>{answer}</p>
+        {isParagraphVisible && (
+          <p className="intro-paragraph">
+            HI ! I’m Arolle ! Your virtual beauty assistant. Let’s get to know
+            you !
+          </p>
+        )}
+        {!buttonClicked && (
+          <button className="start_button" onClick={toggleButton}>
+            START
+          </button>
+        )}
+        {showButton && (
+          <div className="chat-container">
+            <div className="chat-exchange">
+              {messages.map((message, index) => (
+                <div className="chat-prompt" key={index}>
+                  <p>{message}</p>
                 </div>
               ))}
+            </div>
+            <div className="user-reply-container">
+              {currentQuestionIndex < answers.length &&
+                answers[currentQuestionIndex].map((answer, index) => (
+                  <div
+                    className="user-answer-container"
+                    onClick={(e) => handleAnswerClick(e, answer)}
+                    key={index}
+                  >
+                    <p>{answer}</p>
+                  </div>
+                ))}
+            </div>
+            {showSlider && <Slider />}
           </div>
-          {showSlider && <Slider />}
-        </div>
+        )}
       </div>
     </div>
   );
