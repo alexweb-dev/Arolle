@@ -7,4 +7,4 @@ function MapCard() {
     </>
   )
 }
-export default MapCard
+export default MapCard;
