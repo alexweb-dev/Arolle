@@ -26,12 +26,13 @@ function Slider() {
     },
   };
 
-
   return (
     <div className="slider_block">
       <Carousel responsive={responsive}>
         <a
           className="foundation"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.loreal-paris.fr/maquillage/teint/fond-de-teint/fond-de-teint-infaillible-32h-matte-cover/OAP7040.html"
         >
           <img
@@ -48,6 +49,8 @@ function Slider() {
 
         <a
           className="foundation"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.loreal-paris.fr/maquillage/teint/fond-de-teint/infaillible-32h-fond-de-teint-fluide/OAP6866.html"
         >
           <img className="foundation_img" src={super_blend} alt="super_blend" />
@@ -60,6 +63,8 @@ function Slider() {
 
         <a
           className="foundation"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.loreal-paris.fr/maquillage/teint/fond-de-teint/fond-de-teint-accord-parfait/OAP3000.html"
         >
           <img className="foundation_img" src={true_match} alt="true_match" />

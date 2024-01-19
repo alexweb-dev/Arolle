@@ -39,6 +39,8 @@ function MainPage() {
       setShowSlider(true);
       setButtonClicked(true);
     }
+    const chatExchange = document.querySelector(".chat-exchange");
+    chatExchange.scrollTop = chatExchange.scrollHeight;
   };
 
   const toggleButton = () => {
@@ -93,11 +95,15 @@ function MainPage() {
                   L’Oreal to recycle your containers? Click{" "}
                   <span
                     onClick={() => setDisplayMap(true)}
-                    style={{ fontWeight: "900", color: "var(--red)" }}
+                    style={{
+                      fontWeight: "900",
+                      color: "var(--red)",
+                      cursor: "pointer",
+                    }}
                   >
                     here
                   </span>{" "}
-                  to check our collect points
+                  to check our collecting points
                 </p>
               </div>
             )}
