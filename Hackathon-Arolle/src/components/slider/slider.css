@@ -10,24 +10,22 @@
 
 .foundation_description {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding-top: 5%;
-  padding-left: 18%;
+  padding-left: 15%;
   padding-right: 4%;
   gap: 15%;
 }
 
 .foundation_description p {
-  width: 176px;
-  font-size: 13px;
-  color: black;
+  width: 16rem;
+  font-size: 16px;
+  color: var(--black);
   margin-bottom: 2rem;
   text-align: left;
-  font-weight: bold;
-  line-height: 110%;
+  font-weight: 800;
+  line-height: 130%;
 }
 
-.foundation_description:first-child {
+/* .foundation_description:first-child {
   text-align: left;
-}
+} */

@@ -21,7 +21,7 @@ function Slider() {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 428, min: 0 },
+      breakpoint: { max: 463, min: 0 },
       items: 1,
     },
   };

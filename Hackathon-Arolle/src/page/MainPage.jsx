@@ -49,7 +49,9 @@ function MainPage() {
 
   return (
     <div className="whole_page">
-      <img className="logo" src={logo} alt="Logo" />
+      <div className="logo-wrapper">
+        <img className="logo" src={logo} alt="Logo" />
+      </div>
       <div className="chatbox">
         {isParagraphVisible && (
           <p className="intro-paragraph">
@@ -84,16 +86,21 @@ function MainPage() {
                 ))}
             </div>
             {showSlider && <Slider />}
-            {showSlider && (<div className="chat-prompt">
-              <p>
-                Also did you know that you can bring back your old products to
-                L’Oreal to recycle your containers ? Click{" "}
-                <span onClick={() => setDisplayMap(true)}>here</span> to check
-                our collect points
-              </p>
-            </div>)}
-
-            
+            {showSlider && (
+              <div className="last-prompt">
+                <p>
+                  Also did you know that you can bring back your old products to
+                  L’Oreal to recycle your containers? Click{" "}
+                  <span
+                    onClick={() => setDisplayMap(true)}
+                    style={{ fontWeight: "900", color: "var(--red)" }}
+                  >
+                    here
+                  </span>{" "}
+                  to check our collect points
+                </p>
+              </div>
+            )}
             {displayMap && (
               <div>
                 <Map />
