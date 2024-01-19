@@ -4,7 +4,7 @@ import matte_cover from "../../assets/image/matte_cover.png";
 import super_blend from "../../assets/image/super_blend.png";
 import true_match from "../../assets/image/true_match.png";
 import "./slider.css";
-import React from "react";
+import React, { useEffect } from "react";
 
 function Slider() {
   const responsive = {
@@ -21,10 +21,12 @@ function Slider() {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 428, min: 0 },
+      breakpoint: { max: 463, min: 0 },
       items: 1,
     },
   };
+
+
   return (
     <div className="slider_block">
       <Carousel responsive={responsive}>
