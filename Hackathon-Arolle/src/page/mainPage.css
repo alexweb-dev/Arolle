@@ -41,12 +41,6 @@
   overflow: scroll;
 }
 
-.chat-prompt:nth-child(2n) {
-  background-color: var(--white);
-  color: var(--black);
-  margin-left: auto;
-}
-
 .chat-prompt,
 .last-prompt {
   background-color: var(--black);
@@ -58,6 +52,15 @@
   margin: 1rem;
   text-align: left;
   line-height: 130%;
+  animation-delay: 0.5s;
+  animation: fade-up 1s;
+}
+
+.chat-prompt:nth-child(2n) {
+  background-color: var(--white);
+  color: var(--black);
+  margin-left: auto;
+  animation: fade-up 0.5s;
 }
 
 .intro-paragraph {
@@ -89,6 +92,7 @@
   font-weight: 700;
   margin: 100px 2px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .map-container {
@@ -96,4 +100,15 @@
   /* justify-content: center; */
   width: 90%;
   margin: auto;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
 }
